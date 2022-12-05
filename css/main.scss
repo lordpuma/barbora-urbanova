@@ -326,7 +326,7 @@ body {
   background-color: white;
   color: #4007C1;
   grid-template-columns: 150px 150px [content] 1fr;
-  grid-template-rows: 250px [header] 150px [content] 600px;
+  grid-template-rows: 150px [header] 150px [content] 600px;
 
   @include animation(content);
   @keyframes content {
