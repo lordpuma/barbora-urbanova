@@ -36,4 +36,14 @@ body {
   margin-right: 15vw;
 }
 
+p.bold {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.content {
+  grid-template-rows: 150px [header] 150px [content] 600px;
+  height: 100vh;
+}
+
 /*# sourceMappingURL=article.css.map */

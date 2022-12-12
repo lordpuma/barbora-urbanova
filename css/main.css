@@ -337,14 +337,21 @@ body {
   }
 }
 
+.menu-background {
+  width: 100vw;
+  height: 150px;
+  background-color: white;
+}
+
 .content {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 150px);
   display: grid;
   background-color: white;
   color: #4007C1;
   grid-template-columns: 150px 150px [content] 1fr;
-  grid-template-rows: 150px [header] 150px [content] 600px;
+  grid-template-rows: [header] 150px [content] 600px;
+  overflow: scroll;
   animation: linear content 1s;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
@@ -375,6 +382,7 @@ body {
   grid-row: content;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .content .articles .article {
   margin-right: 100px;
