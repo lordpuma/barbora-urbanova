@@ -126,6 +126,11 @@ body {
   font-family: "TT Hoves Pro Trial", sans-serif;
   z-index: 10;
 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
   @include animation(menu);
   @keyframes menu {
     0% {
@@ -244,7 +249,7 @@ body {
   display: grid;
 
   .name {
-    width: 665px;
+    width: min(665px, 35vw);
     grid-column: name;
     grid-row: footer;
     z-index: 1;
@@ -402,10 +407,18 @@ body {
         background-color: white;
         padding: 20px;
         border-radius: 20px;
+        width: 80%;
+
+        p.summary {
+          max-height: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
         h3.article-title {
           font-size: 30px;
           line-height: 30px;
+          margin-top: 5px;
         }
 
         div.cta {

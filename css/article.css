@@ -16,6 +16,9 @@ body {
 .menu {
   background-color: white;
 }
+.menu a {
+  color: #4007C1;
+}
 .menu img {
   filter: brightness(0) saturate(100%) invert(19%) sepia(90%) saturate(5239%) hue-rotate(257deg) brightness(70%) contrast(126%);
 }

@@ -107,6 +107,10 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
+.menu a {
+  text-decoration: none;
+  color: white;
+}
 @keyframes menu {
   33%, 66%, 100%, 83%, to {
     color: white;
@@ -229,7 +233,7 @@ body {
   animation-fill-mode: both;
 }
 .absolutes3 .name {
-  width: 665px;
+  width: min(665px, 35vw);
   grid-column: name;
   grid-row: footer;
   z-index: 1;
@@ -388,10 +392,17 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
+  width: 80%;
+}
+.content .articles .article .article-content p.summary {
+  max-height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content .articles .article .article-content h3.article-title {
   font-size: 30px;
   line-height: 30px;
+  margin-top: 5px;
 }
 .content .articles .article .article-content div.cta {
   font-size: 18px;
