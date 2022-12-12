@@ -421,12 +421,15 @@ body {
           max-height: 200px;
           overflow: hidden;
           text-overflow: ellipsis;
+          font-size: 16px;
+          line-height: 16px;
         }
 
         h3.article-title {
           font-size: 30px;
           line-height: 30px;
           margin-top: 5px;
+          margin-bottom: 8px;
         }
 
         div.cta {

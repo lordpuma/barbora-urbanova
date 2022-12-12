@@ -406,11 +406,14 @@ body {
   max-height: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 16px;
 }
 .content .articles .article .article-content h3.article-title {
   font-size: 30px;
   line-height: 30px;
   margin-top: 5px;
+  margin-bottom: 8px;
 }
 .content .articles .article .article-content div.cta {
   font-size: 18px;
