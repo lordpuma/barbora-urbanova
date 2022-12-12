@@ -305,6 +305,7 @@ body {
   animation-fill-mode: both;
 }
 .absolutes3 .contact a {
+  pointer-events: all;
   color: white;
   text-decoration: none;
   font-size: 50px;
