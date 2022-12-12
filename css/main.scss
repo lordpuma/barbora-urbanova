@@ -87,11 +87,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-$second-screen: 25%;
-$third-screen: 50%;
-$fourth-screen: 75%;
+$second-screen: 33%;
+$third-screen: 66%;
+$fourth-screen: 100%;
 $fifth-screen: 100%;
-$fourth-to-fifth-trans: $fourth-screen + (($fifth-screen - $fourth-screen) / 2);
+$fourth-to-fifth-trans: $third-screen + (($fifth-screen - $third-screen) / 2);
 
 :root * {
   /* Pause the animation */
@@ -153,9 +153,27 @@ body {
       margin-inline: 25px;
 
       &.progress-bar {
-        width: 100px;
-        height: 5px;
+        width: 10vw;
+        height: 2px;
         background-color: white;
+
+        @include animation(progress-bar);
+        @keyframes progress-bar {
+          0% {
+            width: 10vw;
+          }
+          #{$second-screen} {
+            width: 20vw;
+          }
+          #{$third-screen} {
+            width: 30vw;
+            background-color: white;
+          }
+          #{$fifth-screen}, to {
+            width: 40vw;
+            background-color: #4007C1;
+          }
+        }
       }
     }
   }
@@ -190,7 +208,7 @@ body {
         -webkit-mask-image: -webkit-gradient(linear, right top, left bottom, color-stop(0%, black), color-stop(45%, black), color-stop(90%, transparent));
         opacity: 1;
       }
-      #{$fourth-screen}, to {
+      #{$third-screen}, to {
         opacity: 1;
       }
       #{$fourth-to-fifth-trans}, to {
@@ -291,6 +309,13 @@ body {
     font-size: 18px;
     line-height: 25px;
     opacity: 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 50px;
+      margin-right: 20px;
+    }
 
     @include animation(contact3);
     @keyframes contact3 {
