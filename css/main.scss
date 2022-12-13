@@ -93,6 +93,8 @@ $fourth-screen: 100%;
 $fifth-screen: 100%;
 $fourth-to-fifth-trans: $third-screen + (($fifth-screen - $third-screen) / 2);
 
+$small-screen: 800px;
+
 :root * {
   /* Pause the animation */
   animation-play-state: paused;
@@ -220,7 +222,19 @@ body {
         opacity: 0;
       }
     }
+    @media screen and (max-width: $small-screen) {
+      -webkit-mask-image: -webkit-gradient(linear, right top, left bottom, color-stop(0%, black), color-stop(45%, black), color-stop(90%, transparent));
+      @keyframes profile2 {
+        0% {
+          opacity: 1;
+        }
+        #{$second-screen}, to {
+          opacity: 0;
+        }
+      }
+    }
   }
+
 
   @include animation(absolutes2);
   @keyframes absolutes2 {
@@ -268,6 +282,25 @@ body {
         opacity: 0;
       }
     }
+
+    @media screen and (max-width: $small-screen) {
+      grid-row: content;
+      width: 60vw;
+
+      @keyframes name3 {
+        0% {
+        }
+        #{$second-screen}, to {
+          opacity: 0;
+        }
+        #{$third-screen}, to {
+          opacity: 0;
+        }
+        #{$fourth-screen}, to {
+          opacity: 0;
+        }
+      }
+    }
   }
 
   .title {
@@ -278,6 +311,9 @@ body {
     font-size: 18px;
     line-height: 25px;
     align-self: end;
+    @media screen and (max-width: $small-screen) {
+      grid-column: name;
+    }
 
     @include animation(title3);
     @keyframes title3 {
@@ -294,6 +330,9 @@ body {
     font-size: 18px;
     line-height: 25px;
     opacity: 0;
+    @media screen and (max-width: $small-screen) {
+      grid-row: content;
+    }
 
     @include animation(subtitle3);
     @keyframes subtitle3 {
@@ -314,6 +353,10 @@ body {
     font-size: 18px;
     line-height: 25px;
     opacity: 0;
+
+    @media screen and (max-width: $small-screen) {
+      grid-row: content;
+    }
 
     a {
       pointer-events: all;
@@ -348,6 +391,18 @@ body {
       grid-template-rows: 100px 150px [content] 0.0fr [footer] 150px [subfooter] 100px;
     }
   }
+  @media screen and (max-width: $small-screen) {
+    @keyframes absolutes3 {
+      0% {
+        grid-template-columns: 15% [name] 70% 15%;
+        grid-template-rows: 100px 1fr [content] 200px [footer] 250px [subfooter] 50px;
+      }
+      #{$second-screen}, to {
+        grid-template-columns: 100px [name] 0% [title] 2fr 1fr;
+        grid-template-rows: 150px [content] 150px 1.0fr [footer] 150px [subfooter] 100px;
+      }
+    }
+  }
 }
 
 .menu-background {
@@ -365,6 +420,9 @@ body {
   grid-template-columns: 150px 150px [content] 1fr;
   grid-template-rows: [header] 150px [content] 600px;
   overflow: scroll;
+  @media screen and (max-width: $small-screen) {
+    grid-template-columns: 50px [content] 1fr;
+  }
 
   @include animation(content);
   @keyframes content {
@@ -404,8 +462,8 @@ body {
       position: relative;
 
       img.title-image {
-        width: 20vw;
-        height: 30vw;
+        width: 60vw;
+        height: 80vw;
         object-fit: cover;
         border-radius: 1000px;
       }
@@ -423,11 +481,15 @@ body {
           text-overflow: ellipsis;
           font-size: 16px;
           line-height: 16px;
+          @media screen and (max-width: $small-screen) {
+            font-size: 20px;
+            line-height: 20px;
+          }
         }
 
         h3.article-title {
-          font-size: 30px;
-          line-height: 30px;
+          font-size: 25px;
+          line-height: 25px;
           margin-top: 5px;
           margin-bottom: 8px;
         }
