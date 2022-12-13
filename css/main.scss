@@ -125,7 +125,7 @@ body {
   left: 77px;
   position: fixed;
   display: flex;
-  font-family: "TT Hoves Pro Trial", sans-serif;
+  font-family: TTHovesProMedium, sans-serif;
   z-index: 10;
 
   a {
@@ -308,7 +308,7 @@ body {
     z-index: 1;
     grid-column: title;
     grid-row: footer;
-    font-family: "TT Hoves Pro Trial", sans-serif;
+    font-family: TTHovesProMedium, sans-serif;
     font-size: 18px;
     line-height: 25px;
     align-self: end;
@@ -327,7 +327,7 @@ body {
   .subtitle {
     grid-column: title;
     grid-row: subfooter;
-    font-family: "TT Hoves Pro Trial", sans-serif;
+    font-family: TTHovesProMedium, sans-serif;
     font-size: 18px;
     line-height: 25px;
     opacity: 0;
@@ -350,7 +350,7 @@ body {
     z-index: 1;
     grid-column: title;
     grid-row: subfooter;
-    font-family: "TT Hoves Pro Trial", sans-serif;
+    font-family: TTHovesProMedium, sans-serif;
     font-size: 18px;
     line-height: 25px;
     opacity: 0;
