@@ -224,6 +224,7 @@ body {
     }
     @media screen and (max-width: $small-screen) {
       -webkit-mask-image: -webkit-gradient(linear, right top, left bottom, color-stop(0%, black), color-stop(45%, black), color-stop(90%, transparent));
+      grid-column: name / span 4;
       @keyframes profile2 {
         0% {
           opacity: 1;
@@ -395,10 +396,10 @@ body {
     @keyframes absolutes3 {
       0% {
         grid-template-columns: 15% [name] 70% 15%;
-        grid-template-rows: 100px 1fr [content] 200px [footer] 250px [subfooter] 50px;
+        grid-template-rows: 100px 1fr [content] 250px [footer] 250px [subfooter] 50px;
       }
       #{$second-screen}, to {
-        grid-template-columns: 100px [name] 0% [title] 2fr 1fr;
+        grid-template-columns: 50px [name] 0% [title] 1fr 50px;
         grid-template-rows: 150px [content] 150px 1.0fr [footer] 150px [subfooter] 100px;
       }
     }
@@ -422,6 +423,7 @@ body {
   overflow: scroll;
   @media screen and (max-width: $small-screen) {
     grid-template-columns: 50px [content] 1fr;
+    grid-template-rows: [header] 250px [content] 600px;
   }
 
   @include animation(content);
@@ -445,6 +447,7 @@ body {
 
   .title {
     font-size: 4rem;
+    line-height: 4rem;
     font-weight: 800;
     grid-column: content;
     grid-row: header;
@@ -482,8 +485,8 @@ body {
           font-size: 16px;
           line-height: 16px;
           @media screen and (max-width: $small-screen) {
-            font-size: 20px;
-            line-height: 20px;
+            font-size: 18px;
+            line-height: 18px;
           }
         }
 
