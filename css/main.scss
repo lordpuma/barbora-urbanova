@@ -465,8 +465,12 @@ body {
       position: relative;
 
       img.title-image {
-        width: 60vw;
-        height: 80vw;
+        width: 20vw;
+        height: 30vw;
+        @media screen and (max-width: $small-screen) {
+          width: 60vw;
+          height: 80vw;
+        }
         object-fit: cover;
         border-radius: 1000px;
       }

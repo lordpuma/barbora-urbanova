@@ -454,10 +454,16 @@ body {
   position: relative;
 }
 .content .articles .article img.title-image {
-  width: 60vw;
-  height: 80vw;
+  width: 20vw;
+  height: 30vw;
   object-fit: cover;
   border-radius: 1000px;
+}
+@media screen and (max-width: 800px) {
+  .content .articles .article img.title-image {
+    width: 60vw;
+    height: 80vw;
+  }
 }
 .content .articles .article .article-content {
   position: absolute;
