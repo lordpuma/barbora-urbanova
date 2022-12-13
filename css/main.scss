@@ -94,6 +94,7 @@ $fifth-screen: 100%;
 $fourth-to-fifth-trans: $third-screen + (($fifth-screen - $third-screen) / 2);
 
 $small-screen: 800px;
+$medium-screen: 1700px;
 
 :root * {
   /* Pause the animation */
@@ -244,7 +245,24 @@ body {
       grid-template-rows: 100px 0 [content] 1fr [footer] 250px 100px;
     }
     #{$second-screen}, #{$third-screen}, to {
-      grid-template-columns: 15% [name] 0 [profile] 20% 0 [title] 20% 15%;
+      grid-template-columns: 5% [name] 0 [profile] 20% 0 [title] 20% 15%;
+      grid-template-rows: 100px 150px [content] 0.0fr [footer] 250px 100px;
+    }
+    #{$fourth-screen}, to {
+      grid-template-columns: 35% [name] 0 [profile] 30% 0 [title] 20% 15%;
+      grid-template-rows: 100px 150px [content] 0.0fr [footer] 250px 100px;
+    }
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  @keyframes absolutes2 {
+    0% {
+      grid-template-columns: 15% [name] 10% [profile] 30% [title] 20% 10% 15% ;
+      grid-template-rows: 100px 0 [content] 1fr [footer] 250px 100px;
+    }
+    #{$second-screen}, #{$third-screen}, to {
+      grid-template-columns: 5% [name] 0 [profile] 20% 0 [title] 20% 15%;
       grid-template-rows: 100px 150px [content] 0.0fr [footer] 250px 100px;
     }
     #{$fourth-screen}, to {
@@ -390,6 +408,18 @@ body {
     #{$second-screen}, to {
       grid-template-columns: 45% [name] 0% [title] 2fr 1fr;
       grid-template-rows: 100px 150px [content] 0.0fr [footer] 150px [subfooter] 100px;
+    }
+  }
+  @media screen and (max-width: $medium-screen) {
+    @keyframes absolutes3 {
+      0% {
+        grid-template-columns: 15% [name] 40% [title] 30% 15%;
+        grid-template-rows: 100px 0 [content] 1fr [footer] 250px [subfooter] 100px;
+      }
+      #{$second-screen}, to {
+        grid-template-columns: 35% [name] 0% [title] 2fr 100px;
+        grid-template-rows: 100px 50px [content] 0.0fr [footer] 150px [subfooter] 100px;
+      }
     }
   }
   @media screen and (max-width: $small-screen) {
