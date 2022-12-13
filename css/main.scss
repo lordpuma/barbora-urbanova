@@ -448,7 +448,7 @@ body {
   display: grid;
   background-color: white;
   color: #4007C1;
-  grid-template-columns: 150px 150px [content] 1fr;
+  grid-template-columns: 100px 150px [content] 1fr;
   grid-template-rows: [header] 150px [content] 600px;
   overflow: scroll;
   @media screen and (max-width: $small-screen) {
