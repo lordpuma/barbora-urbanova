@@ -129,6 +129,7 @@ body {
   font-family: TTHovesProMedium, sans-serif;
   z-index: 10;
 
+
   a {
     text-decoration: none;
     color: white;
@@ -137,14 +138,18 @@ body {
   @include animation(menu);
   @keyframes menu {
     0% {
+      color: white;
+      fill: white;
     }
     #{$second-screen}, #{$third-screen}, #{$fourth-screen}, #{$fourth-to-fifth-trans}, to {
       color: white;
-      filter: none;
+      fill: white;
+      //filter: none;
     }
     #{$fifth-screen}, to {
       color: #4007C1;
-      filter: brightness(0) saturate(100%) invert(19%) sepia(90%) saturate(5239%) hue-rotate(257deg) brightness(70%) contrast(126%);
+      fill: #4007C1;
+      //filter: brightness(0) saturate(100%) invert(19%) sepia(90%) saturate(5239%) hue-rotate(257deg) brightness(70%) contrast(126%);
     }
   }
 
@@ -364,6 +369,15 @@ body {
   }
 }
 
+@media screen and (max-height: 805px){
+  .hidden-with-short-device {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+}
+
 .absolutes4 {
   width: 100vw;
   height: 100vh;
@@ -433,6 +447,10 @@ body {
       text-decoration: none;
       font-size: 50px;
       margin-right: 20px;
+    }
+
+    p {
+      font-size: 18px !important;
     }
 
     @include animation(contact4);

@@ -112,13 +112,17 @@ body {
   color: white;
 }
 @keyframes menu {
+  0% {
+    color: white;
+    fill: white;
+  }
   33%, 66%, 100%, 83%, to {
     color: white;
-    filter: none;
+    fill: white;
   }
   100%, to {
     color: #4007C1;
-    filter: brightness(0) saturate(100%) invert(19%) sepia(90%) saturate(5239%) hue-rotate(257deg) brightness(70%) contrast(126%);
+    fill: #4007C1;
   }
 }
 .menu nav ul {
@@ -344,6 +348,14 @@ body {
   }
 }
 
+@media screen and (max-height: 805px) {
+  .hidden-with-short-device {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+}
 .absolutes4 {
   width: 100vw;
   height: 100vh;
@@ -431,6 +443,9 @@ body {
   text-decoration: none;
   font-size: 50px;
   margin-right: 20px;
+}
+.absolutes4 .contact p {
+  font-size: 18px !important;
 }
 @keyframes contact4 {
   33%, to {
