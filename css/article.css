@@ -36,6 +36,10 @@ body {
   margin-right: 15vw;
 }
 
+.article-content > *:last-child {
+  padding-bottom: 100px;
+}
+
 p.bold {
   font-weight: bold;
   font-style: italic;
@@ -44,7 +48,6 @@ p.bold {
 .content {
   grid-template-rows: 150px [header] 150px [content] 600px;
   height: 100vh;
-  margin-bottom: 150px;
 }
 
 /*# sourceMappingURL=article.css.map */
