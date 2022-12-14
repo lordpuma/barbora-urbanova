@@ -156,6 +156,10 @@ body {
     padding: 0;
     margin: 0 0 0 50px;
 
+    @media screen and (max-width: $small-screen){
+      display: none;
+    }
+
     li {
       display: inline;
       margin-inline: 25px;
@@ -308,6 +312,7 @@ body {
 
       @keyframes name3 {
         0% {
+          opacity: 1;
         }
         #{$second-screen}, to {
           opacity: 0;
@@ -318,83 +323,6 @@ body {
         #{$fourth-screen}, to {
           opacity: 0;
         }
-      }
-    }
-  }
-
-  .title {
-    z-index: 1;
-    grid-column: title;
-    grid-row: footer;
-    font-family: TTHovesProMedium, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    align-self: end;
-    @media screen and (max-width: $small-screen) {
-      grid-column: name;
-    }
-
-    @include animation(title3);
-    @keyframes title3 {
-      #{$second-screen}, to {
-        opacity: 0;
-      }
-    }
-  }
-
-  .subtitle {
-    grid-column: title;
-    grid-row: subfooter;
-    font-family: TTHovesProMedium, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    opacity: 0;
-    @media screen and (max-width: $small-screen) {
-      grid-row: content;
-    }
-
-    @include animation(subtitle3);
-    @keyframes subtitle3 {
-      #{$second-screen}, to {
-        opacity: 1;
-      }
-      #{$third-screen}, to {
-        opacity: 0;
-      }
-    }
-  }
-
-  .contact {
-    z-index: 1;
-    grid-column: title;
-    grid-row: subfooter;
-    font-family: TTHovesProMedium, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    opacity: 0;
-
-    @media screen and (max-width: $small-screen) {
-      grid-row: content;
-    }
-
-    a {
-      pointer-events: all;
-      color: white;
-      text-decoration: none;
-      font-size: 50px;
-      margin-right: 20px;
-    }
-
-    @include animation(contact3);
-    @keyframes contact3 {
-      #{$second-screen}, to {
-        opacity: 0;
-      }
-      #{$third-screen}, to {
-        opacity: 1;
-      }
-      #{$fourth-screen}, to {
-        opacity: 0;
       }
     }
   }
@@ -424,6 +352,128 @@ body {
   }
   @media screen and (max-width: $small-screen) {
     @keyframes absolutes3 {
+      0% {
+        grid-template-columns: 15% [name] 70% 15%;
+        grid-template-rows: 100px 1fr [content] 250px [footer] 250px [subfooter] 50px;
+      }
+      #{$second-screen}, to {
+        grid-template-columns: 50px [name] 0% [title] 1fr 50px;
+        grid-template-rows: 150px [content] 150px 1.0fr [footer] 150px [subfooter] 100px;
+      }
+    }
+  }
+}
+
+.absolutes4 {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+
+  .title {
+    z-index: 1;
+    grid-column: title;
+    grid-row: footer;
+    font-family: tthovespromedium, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    align-self: end;
+    @media screen and (max-width: $small-screen) {
+      grid-column: name;
+    }
+
+    @include animation(title4);
+    @keyframes title4 {
+      #{$second-screen}, to {
+        opacity: 0;
+      }
+    }
+  }
+
+  .subtitle {
+    grid-column: title;
+    grid-row: subfooter;
+    font-family: tthovespromedium, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    opacity: 0;
+    height: 80vh;
+    overflow: scroll;
+
+    @media screen and (max-width: $small-screen) {
+      grid-row: content;
+    }
+
+    @include animation(subtitle4);
+    @keyframes subtitle4 {
+      #{$second-screen}, to {
+        opacity: 1;
+      }
+      #{$third-screen}, to {
+        opacity: 0;
+      }
+    }
+  }
+
+  .contact {
+    z-index: 1;
+    grid-column: title;
+    grid-row: subfooter;
+    font-family: tthovespromedium, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    opacity: 0;
+
+    @media screen and (max-width: $small-screen) {
+      grid-row: content;
+    }
+
+    a {
+      pointer-events: all;
+      color: white;
+      text-decoration: none;
+      font-size: 50px;
+      margin-right: 20px;
+    }
+
+    @include animation(contact4);
+    @keyframes contact4 {
+      #{$second-screen}, to {
+        opacity: 0;
+      }
+      #{$third-screen}, to {
+        opacity: 1;
+      }
+      #{$fourth-screen}, to {
+        opacity: 0;
+      }
+    }
+  }
+
+  @include animation(absolutes4);
+  @keyframes absolutes4 {
+    0% {
+      grid-template-columns: 15% [name] 40% [title] 30% 15% ;
+      grid-template-rows: 100px 0 [content] 1fr [footer] 250px [subfooter] 100px;
+    }
+    #{$second-screen}, to {
+      grid-template-columns: 45% [name] 0% [title] 2fr 1fr;
+      grid-template-rows: 100px 150px [content] 0.0fr [footer] 150px [subfooter] 100px;
+    }
+  }
+  @media screen and (max-width: $medium-screen) {
+    @keyframes absolutes4 {
+      0% {
+        grid-template-columns: 15% [name] 40% [title] 30% 15%;
+        grid-template-rows: 100px 0 [content] 1fr [footer] 250px [subfooter] 100px;
+      }
+      #{$second-screen}, to {
+        grid-template-columns: 35% [name] 0% [title] 2fr 100px;
+        grid-template-rows: 100px 50px [content] 0.0fr [footer] 150px [subfooter] 100px;
+      }
+    }
+  }
+  @media screen and (max-width: $small-screen) {
+    @keyframes absolutes4 {
       0% {
         grid-template-columns: 15% [name] 70% 15%;
         grid-template-rows: 100px 1fr [content] 250px [footer] 250px [subfooter] 50px;

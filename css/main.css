@@ -129,6 +129,11 @@ body {
   padding: 0;
   margin: 0 0 0 50px;
 }
+@media screen and (max-width: 800px) {
+  .menu nav ul {
+    display: none;
+  }
+}
 .menu nav ul li {
   display: inline;
   margin-inline: 25px;
@@ -290,6 +295,9 @@ body {
     width: 60vw;
   }
   @keyframes name3 {
+    0% {
+      opacity: 1;
+    }
     33%, to {
       opacity: 0;
     }
@@ -299,93 +307,6 @@ body {
     100%, to {
       opacity: 0;
     }
-  }
-}
-.absolutes3 .title {
-  z-index: 1;
-  grid-column: title;
-  grid-row: footer;
-  font-family: TTHovesProMedium, sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  align-self: end;
-  animation: linear title3 1s;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-@media screen and (max-width: 800px) {
-  .absolutes3 .title {
-    grid-column: name;
-  }
-}
-@keyframes title3 {
-  33%, to {
-    opacity: 0;
-  }
-}
-.absolutes3 .subtitle {
-  grid-column: title;
-  grid-row: subfooter;
-  font-family: TTHovesProMedium, sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  opacity: 0;
-  animation: linear subtitle3 1s;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-@media screen and (max-width: 800px) {
-  .absolutes3 .subtitle {
-    grid-row: content;
-  }
-}
-@keyframes subtitle3 {
-  33%, to {
-    opacity: 1;
-  }
-  66%, to {
-    opacity: 0;
-  }
-}
-.absolutes3 .contact {
-  z-index: 1;
-  grid-column: title;
-  grid-row: subfooter;
-  font-family: TTHovesProMedium, sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  opacity: 0;
-  animation: linear contact3 1s;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-@media screen and (max-width: 800px) {
-  .absolutes3 .contact {
-    grid-row: content;
-  }
-}
-.absolutes3 .contact a {
-  pointer-events: all;
-  color: white;
-  text-decoration: none;
-  font-size: 50px;
-  margin-right: 20px;
-}
-@keyframes contact3 {
-  33%, to {
-    opacity: 0;
-  }
-  66%, to {
-    opacity: 1;
-  }
-  100%, to {
-    opacity: 0;
   }
 }
 @keyframes absolutes3 {
@@ -412,6 +333,140 @@ body {
 }
 @media screen and (max-width: 800px) {
   @keyframes absolutes3 {
+    0% {
+      grid-template-columns: 15% [name] 70% 15%;
+      grid-template-rows: 100px 1fr [content] 250px [footer] 250px [subfooter] 50px;
+    }
+    33%, to {
+      grid-template-columns: 50px [name] 0% [title] 1fr 50px;
+      grid-template-rows: 150px [content] 150px 1fr [footer] 150px [subfooter] 100px;
+    }
+  }
+}
+
+.absolutes4 {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  animation: linear absolutes4 1s;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.absolutes4 .title {
+  z-index: 1;
+  grid-column: title;
+  grid-row: footer;
+  font-family: tthovespromedium, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  align-self: end;
+  animation: linear title4 1s;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 800px) {
+  .absolutes4 .title {
+    grid-column: name;
+  }
+}
+@keyframes title4 {
+  33%, to {
+    opacity: 0;
+  }
+}
+.absolutes4 .subtitle {
+  grid-column: title;
+  grid-row: subfooter;
+  font-family: tthovespromedium, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  opacity: 0;
+  height: 80vh;
+  overflow: scroll;
+  animation: linear subtitle4 1s;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 800px) {
+  .absolutes4 .subtitle {
+    grid-row: content;
+  }
+}
+@keyframes subtitle4 {
+  33%, to {
+    opacity: 1;
+  }
+  66%, to {
+    opacity: 0;
+  }
+}
+.absolutes4 .contact {
+  z-index: 1;
+  grid-column: title;
+  grid-row: subfooter;
+  font-family: tthovespromedium, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  opacity: 0;
+  animation: linear contact4 1s;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@media screen and (max-width: 800px) {
+  .absolutes4 .contact {
+    grid-row: content;
+  }
+}
+.absolutes4 .contact a {
+  pointer-events: all;
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  margin-right: 20px;
+}
+@keyframes contact4 {
+  33%, to {
+    opacity: 0;
+  }
+  66%, to {
+    opacity: 1;
+  }
+  100%, to {
+    opacity: 0;
+  }
+}
+@keyframes absolutes4 {
+  0% {
+    grid-template-columns: 15% [name] 40% [title] 30% 15%;
+    grid-template-rows: 100px 0 [content] 1fr [footer] 250px [subfooter] 100px;
+  }
+  33%, to {
+    grid-template-columns: 45% [name] 0% [title] 2fr 1fr;
+    grid-template-rows: 100px 150px [content] 0fr [footer] 150px [subfooter] 100px;
+  }
+}
+@media screen and (max-width: 1700px) {
+  @keyframes absolutes4 {
+    0% {
+      grid-template-columns: 15% [name] 40% [title] 30% 15%;
+      grid-template-rows: 100px 0 [content] 1fr [footer] 250px [subfooter] 100px;
+    }
+    33%, to {
+      grid-template-columns: 35% [name] 0% [title] 2fr 100px;
+      grid-template-rows: 100px 50px [content] 0fr [footer] 150px [subfooter] 100px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  @keyframes absolutes4 {
     0% {
       grid-template-columns: 15% [name] 70% 15%;
       grid-template-rows: 100px 1fr [content] 250px [footer] 250px [subfooter] 50px;
