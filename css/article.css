@@ -50,4 +50,28 @@ p.bold {
   height: 100vh;
 }
 
+@media print {
+  .menu-hack {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .tile {
+    display: none;
+  }
+  .content {
+    grid-template-rows: [content] 1fr;
+    grid-template-columns: [content] 1fr;
+    height: 100%;
+  }
+  .content .article {
+    width: 100%;
+    height: 100%;
+  }
+  .content .title-image {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=article.css.map */
